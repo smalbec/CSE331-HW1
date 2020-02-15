@@ -42,25 +42,23 @@ class Solution:
                 #Basically checks if any more preffered men exist in her list
                 prefference = (self.woman[match[0]]).index(match[1])
                 while(prefference != 0):
-                    prefference += -1
+                    #looks for the match where the man is
+                    for man_match in perfect_matching:
+                        #if the match is equal to the prefference then
+                        if(man_match[1] == prefference):
+                            #Check the index of both women (original match and man's own match)
+                            #If original match is higher, then relation is unstable.f
+                            if((self.man[man_match[1]]).index(man_match[0]) > (self.man[man_match[1]]).index(match[1])):
+
                 #Checks index of the woman looking for better match in men prefference list
-                #We want to check if it's index is higher or lower than the one from the man's matched woman    
-                perfect_matching
+                #We want to check if it's index is higher or lower than the one from the man's matched woman
 
 
-                #Loop goes through the preference list of the current woman in reverse (1,2,3) so it starts with 3
-                for prefference in reversed(self.women[match[1]]):
-                    if(match[1] < preference):
-                #Loop goes through the preference list of the current men in reverse (1,2,3) so it starts with 3
-                        
-
-
-git commit -a -m "FIND A WAY TO GET THE MATCH WHERE THE MAN IS FUCK"
 
         #all_perfect_matching.append(perfect_matching)
                 
 
-        print(all_perfect_matching)
+        #print(all_perfect_matching)
 
         
         
